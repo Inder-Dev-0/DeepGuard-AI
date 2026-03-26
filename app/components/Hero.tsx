@@ -9,28 +9,28 @@ export const Hero = () => {
   return (
     <section id="home" className="relative pt-60 pb-20 overflow-hidden bg-accent bg-grid">
       {/* Scanning background overlay */}
-      <motion.div 
+      <motion.div
         animate={{ y: ["-100%", "100%"] }}
         transition={{ duration: 10, repeat: Infinity, ease: "linear" }}
         className="absolute inset-0 bg-gradient-to-b from-transparent via-neon/5 to-transparent h-1/2 pointer-events-none z-0"
       />
-      
+
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-full pointer-events-none">
-        <motion.div 
-          animate={{ 
+        <motion.div
+          animate={{
             scale: [1, 1.2, 1],
-            opacity: [0.1, 0.15, 0.1] 
+            opacity: [0.1, 0.15, 0.1]
           }}
           transition={{ duration: 8, repeat: Infinity, ease: "linear" }}
-          className="absolute top-1/4 left-1/4 w-96 h-96 bg-accent/10 blur-[120px] rounded-full" 
+          className="absolute top-1/4 left-1/4 w-96 h-96 bg-accent/10 blur-[120px] rounded-full"
         />
-        <motion.div 
-          animate={{ 
+        <motion.div
+          animate={{
             scale: [1.2, 1, 1.2],
-            opacity: [0.1, 0.15, 0.1] 
+            opacity: [0.1, 0.15, 0.1]
           }}
           transition={{ duration: 10, repeat: Infinity, ease: "linear" }}
-          className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-neon/10 blur-[120px] rounded-full" 
+          className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-neon/10 blur-[120px] rounded-full"
         />
       </div>
 
@@ -40,7 +40,7 @@ export const Hero = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, ease: "easeOut" }}
         >
-          <motion.span 
+          <motion.span
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ delay: 0.2 }}
@@ -60,14 +60,16 @@ export const Hero = () => {
             Our advanced AI analyzes voice, images, and files to identify manipulated media with high accuracy. Stay protected against digital deception.
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-            <motion.button 
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-              className="w-full sm:w-auto bg-neon text-primary px-8 py-4 rounded-xl font-bold flex items-center justify-center gap-2 transition-all glow-blue"
-            >
-              Upload Now <ArrowRight size={18} />
-            </motion.button>
-            <motion.button 
+            <a href="#detect">
+              <motion.button
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                className="w-full sm:w-auto bg-neon text-primary px-8 py-4 rounded-xl font-bold flex items-center justify-center gap-2 transition-all glow-blue"
+              >
+                Upload Now <ArrowRight size={18} />
+              </motion.button>
+            </a>
+            <motion.button
               whileHover={{ backgroundColor: "rgba(255,255,255,0.1)" }}
               className="w-full sm:w-auto bg-white/5 border border-white/10 text-white px-8 py-4 rounded-xl font-bold transition-all"
             >
@@ -82,7 +84,7 @@ export const Hero = () => {
             { icon: <FileImage className="text-white" />, title: 'Image Detection', desc: 'Identify AI-generated or manipulated images.' },
             { icon: <File className="text-cyan-400" />, title: 'File Verification', desc: 'Analyze face swaps and deepfake files.' },
           ].map((item, i) => (
-            <motion.div 
+            <motion.div
               key={i}
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}

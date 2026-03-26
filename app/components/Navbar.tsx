@@ -38,9 +38,9 @@ export const Navbar = () => {
               {link.name}
             </a>
           ))}
-          <button className="bg-neon text-primary px-6 py-2 rounded-lg text-sm font-bold uppercase transition-all hover:opacity-90 active:scale-95">
+          <a href='#detect' className="bg-neon text-primary px-6 py-2 rounded-lg text-sm font-bold uppercase transition-all hover:opacity-90 active:scale-95">
             Start Detection
-          </button>
+          </a>
         </div>
 
         {/* Mobile Toggle */}
